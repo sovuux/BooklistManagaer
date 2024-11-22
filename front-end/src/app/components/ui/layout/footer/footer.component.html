@@ -1,0 +1,15 @@
+<footer class="footer">
+  <span class="footer-text footer-container"
+    >All rights reserved By {{ atSignSymbol }}Sovuux</span
+  >
+  <ul class="footer-social-media footer-container">
+    <li
+      class="footer-social-media-item"
+      *ngFor="let item of socialMedia; index as i"
+    >
+      <app-button (click)="openUrl(item.url)"
+        ><i [class]="item.icon"></i
+      ></app-button>
+    </li>
+  </ul>
+</footer>

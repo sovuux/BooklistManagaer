@@ -1,0 +1,4 @@
+<button [ngClass]="buttonClass" class="btn">
+  <ng-content></ng-content>
+  <span *ngIf="buttonText">{{ buttonText }}</span>
+</button>

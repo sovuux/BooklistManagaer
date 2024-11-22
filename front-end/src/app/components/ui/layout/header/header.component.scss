@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #725b3a;
+  padding: 1rem;
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+
+    &-icon {
+      color: #fca72c;
+      font-size: 2rem;
+    }
+
+    &-title {
+      margin: 0 0 0 0.5rem;
+      font-weight: bold;
+    }
+  }
+
+  &-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    app-input {
+      flex: 1;
+      input {
+        width: 100%;
+      }
+    }
+
+    app-button {
+      position: absolute;
+      right: 28.5rem;
+      top: 55%;
+      transform: translateY(-50%);
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+}

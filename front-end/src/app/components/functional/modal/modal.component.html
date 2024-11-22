@@ -1,0 +1,26 @@
+<div class="modal-backdrop" *ngIf="isOpen">
+  <div class="modal">
+    <h2 class="modal-title">{{ modalTitle }}</h2>
+
+    <div class="modal-body">
+      <div *ngFor="let field of modalFields" class="form-group">
+        <label>{{ field.label }}</label>
+        <input
+          type="text"
+          [value]="!modalData || modalData[field.key] || ''"
+          (input)="modalData[field.key] = $event.target"
+        />
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button
+        *ngFor="let button of modalButtons"
+        (click)="onButtonClick(button)"
+        class="modal-button"
+      >
+        {{ button }}
+      </button>
+    </div>
+  </div>
+</div>

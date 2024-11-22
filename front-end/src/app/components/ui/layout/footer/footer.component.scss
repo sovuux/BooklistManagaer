@@ -1,0 +1,41 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #725b3a;
+  &-container {
+    margin: 0 1rem;
+    padding: 1rem 0;
+  }
+  &-social-media {
+    display: flex;
+    font-size: 2rem;
+    &-item {
+      margin: 0 1rem;
+      padding: 0.5rem;
+    }
+  }
+  &-text {
+    margin-left: 2rem !important;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #f2e5d0;
+  }
+}
+
+.pi {
+  color: #f2e5d0;
+  font-size: 2rem;
+  display: flex;
+  &-github {
+    &:hover {
+      color: black;
+    }
+  }
+  &-telegram {
+    &:hover {
+      color: #2aabee;
+    }
+  }
+}

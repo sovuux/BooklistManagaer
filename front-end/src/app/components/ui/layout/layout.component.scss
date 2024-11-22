@@ -1,0 +1,18 @@
+.layout {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+
+  &-header {
+    height: 80px;
+    flex-shrink: 0;
+  }
+  &-main {
+    flex-grow: 1;
+  }
+  &-footer {
+    height: 80px;
+    flex-shrink: 0;
+  }
+}

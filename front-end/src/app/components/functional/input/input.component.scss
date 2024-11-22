@@ -1,0 +1,21 @@
+.input {
+  &-label {
+    font-weight: bold;
+  }
+  &-container {
+    display: flex;
+    flex-direction: column;
+  }
+  &-field {
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    padding: 1rem 1rem 1rem 3.4rem;
+    width: 500px;
+    border: 1px solid #725b3a;
+    &:focus {
+      outline: none;
+      border-color: #ae8958;
+    }
+  }
+}

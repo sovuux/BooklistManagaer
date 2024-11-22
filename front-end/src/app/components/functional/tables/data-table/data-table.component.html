@@ -1,0 +1,26 @@
+<div class="table-container">
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th *ngFor="let column of tableColumns; index as i">
+          {{ column.name }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let row of tableData; index as index"
+        (click)="getRowData(row, index)"
+      >
+        <td *ngFor="let column of tableColumns">
+          <ng-container
+            *ngIf="['createdAt', 'updatedAt'].includes(column.key); else common"
+          >
+            {{ formatDate(row[column.key]) }}
+          </ng-container>
+          <ng-template #common>{{ row[column.key] }}</ng-template>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
